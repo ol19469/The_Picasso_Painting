@@ -13,7 +13,6 @@ body {
   padding: 20px;
 }
 
-/* Main Section */
 .main-container {
   width: 100%;
   max-width: 1200px;
@@ -23,25 +22,22 @@ body {
   padding: 20px;
 }
 
-/* Grid Section */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns by default */
-  grid-template-rows: repeat(10, 150px); /* Default row height */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(10, 150px);
   gap: 10px;
 }
 
-/* Teal Boxes */
 .teal-box {
-  position: relative; /* Ensures circles are positioned relative to this box */
+  position: relative;
   background-color: teal;
-  /* Lower z-index than circles */
 }
 
 .teal-box_big {
-  position: relative; /* Ensures circles are positioned relative to this box */
+  position: relative;
   background-color: teal;
-  grid-column: 1 / 5; /* Spans all columns */
+  grid-column: 1 / 5;
   grid-row: 2 / 4;
   z-index: 1;
 }
@@ -52,42 +48,38 @@ body {
   height: 20px;
   z-index: 1;
 }
-/* Circles */
+
 .circle {
-  position: absolute; /* Positioned relative to the nearest parent with position: relative */
-  border-radius: 50%; /* Makes the circles circular */
-  z-index: 5; /* Higher z-index to appear above the boxes */
+  position: absolute;
+  border-radius: 50%;
+  z-index: 5;
 }
 
-/* Yellow Large Circle */
 .circle.yellow.large {
   background-color: yellow;
   width: 100px;
   height: 100px;
-  top: 20px; /* Position from the top of the parent */
-  right: 40px; /* Position from the left of the parent */
+  top: 20px;
+  right: 40px;
 }
 
-/* Pink Medium Circle */
 .circle.pink.medium {
   background-color: pink;
   width: 100px;
   height: 100px;
-  top: 35%; /* Center vertically */
-  left: -5%; /* Center horizontally */
-  transform: translate(350%, 50%); /* Perfect centering */
+  top: 35%;
+  left: -5%;
+  transform: translate(350%, 50%);
 }
 
-/* Yellow Small Circle */
 .circle.yellow.small {
   background-color: yellow;
   width: 35px;
   height: 35px;
-  top: 40px; /* Position from the bottom of the parent */
-  left: 200px; /* Position from the right of the parent */
+  top: 40px;
+  left: 200px;
 }
 
-/* Pink Small Circle */
 .circle.pink.small {
   background-color: pink;
   width: 35px;
@@ -109,19 +101,10 @@ body {
   top: 20px;
   left: 50px;
 }
-/* Bottom Section */
-.bottom-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 20px; /* Add space between sections */
-  margin-top: 30px;
-}
 
-/* Mountains Section */
 .mountain {
-  position: absolute; /* Positioned relative to .teal-box_big */
-  width: 300px; /* Default size */
+  position: absolute;
+  width: 300px;
   clip-path: polygon(50% 0, 0 100%, 100% 100%);
 }
 
@@ -149,22 +132,21 @@ body {
 }
 
 .human-row img.blue {
-  filter: hue-rotate(200deg) brightness(0.8) saturate(1.5); /* Adds a blue hue to silhouettes */
+  filter: hue-rotate(200deg) brightness(0.8) saturate(1.5);
 }
 
 .human-row img.black {
-  filter: brightness(0); /* Makes silhouettes black */
+  filter: brightness(0);
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr; /* Switch to single-column layout */
-    grid-template-rows: auto; /* Allow rows to resize automatically */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 
   .teal-box_big {
-    grid-column: span 1; /* Spans one column in a single-column layout */
+    grid-column: span 1;
   }
 }
 .bottom-section {
